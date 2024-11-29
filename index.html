@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarker</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.png" />
+    <!-- icons -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- SweetAlert2 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.20/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+    <!-- style -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="bg-black text-white">
+    <!-- Strat input Section-->
+    <div class="section vh-100" id="inputSection">
+      <div class="container">
+        <!-- Titel Section -->
+        <div class="titel text-center pt-5 pb-4">
+          <h1 class="py-2 position-relative">Bookmarker</h1>
+          <h2 class="pb-5">
+            <i class="fa-solid fa-bookmark fa-fade" style="color: #f9fbfa"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark fa-fade" style="color: #f9fbfa"></i>
+          </h2>
+        </div>
+        <form id="siteForm" class="card pt-4 mb-4">
+          <div class="form-floating mb-3">
+            <input
+              name="siteName"
+              type="text"
+              class="form-control"
+              id="siteName"
+              placeholder=" "
+            />
+            <label for="siteName"
+              ><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label
+            >
+            <div
+              id="siteNameError"
+              class="text-danger"
+              style="display: none"
+            ></div>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input
+              name="siteURL"
+              type="text"
+              class="form-control"
+              id="siteURL"
+              placeholder=" "
+            />
+            <label for="siteURL"
+              ><i class="fa-solid fa-book-bookmark pe-2"></i>Site Url</label
+            >
+            <div
+              id="siteURLError"
+              class="text-danger"
+              style="display: none"
+            ></div>
+          </div>
+
+          <button
+            class="btn btn-submit px-5 btn-outline-success my-4 w-100"
+            id="submitButton"
+          ><i class="fa-solid fa-square-plus fa-fade fa-lg"></i>
+            Submit
+          </button>
+        </form>
+        <div class="arrow-down text-center py-3">
+          <i
+            onclick="scrollToBottom()"
+            class="fa-duotone fa-solid fa-arrow-down-to-arc fa-beat"
+            style="
+              --fa-primary-color: #67707e;
+              --fa-secondary-color: #67707e;
+              font-size: 30px;
+            "
+          ></i>
+        </div>
+      </div>
+    </div>
+    <!-- End input Section-->
+
+    <!-- Start display Section-->
+    <div class="section" id="displaySection">
+      <div class="container">
+        <!-- Titel display Section-->
+        <div class="table-header">
+          <h2 class="fs-1 fw-bolder mb-0 text-center">Bookmarkes</h2>
+        </div>
+        <table class="table table-bordered mt-3 mb-5">
+          <thead class="thead-dark">
+            <tr>
+              <th>index</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="sitesTableBody">
+            <!-- Data come from JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- End display Section-->
+
+    <!-- Start Footer Section-->
+    <div id="footer" class="py-3">
+      <div class="container text-center">
+        <p class="text-white mb-2">
+          <i class="fa-regular fa-copyright"></i>
+          Copyright
+          <span class="">Ahmed Magdy</span>
+          .Third JS Assignment Route Academy
+        </p>
+        <div class="footer-text d-flex justify-content-center">
+          <p class="text-white">
+            instructor :
+            <a href="#">Jasmine Lotfy</a>
+          </p>
+          <p class="text-white ps-2">
+            Mentor :
+            <a href="#">Muhamed hajajii</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- End Footer Section-->
+    
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.20/dist/sweetalert2.all.min.js"></script>
+    <!-- JS Link -->
+    <script src="js/index.js"></script>
+  </body>
+</html>

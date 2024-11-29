@@ -1,0 +1,102 @@
+/* --Global style-- */
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: rgb(62, 61, 61);
+outline: 1px solid slategrey;
+border-radius: 10px;
+}
+h1 {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-size: 4rem;
+  font-style: normal;
+}
+h2 {
+  font-family: "Codystar", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.arrow-down i{
+  cursor: pointer;
+}
+/* --Strat input Section-- */
+.card {
+  margin: 0 auto;
+  padding: 2em;
+  background: #141414;
+  text-align: center;
+  border-radius: 10px;
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.card::after,
+.card::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent,
+    blue,
+    #00ff99,
+    #ff0095,
+    #ff4545
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.card::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+/* -- End input Section-- */
+
+/* -- Start display Section-- */
+.table-header {
+  background-color: #141414;
+  border-radius: 7px;
+  padding: 0.8rem 1rem;
+}
+
+/* --START-FOOTER-- */
+#footer {
+  background-color: #141414;
+
+}
+#footer span {
+  font-weight: bolder;
+}
+#footer a {
+  color: #04cf4f;
+  text-decoration: none;
+  transition: 1s;
+}
+#footer a:hover{
+  color: #ff0095;
+}
+
+/* --END-FOOTER-- */
